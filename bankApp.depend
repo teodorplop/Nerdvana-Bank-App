@@ -1,0 +1,135 @@
+# depslib dependency file v1.0
+1640086680 source:c:\users\offic\documents\programe c\bankapp\main.cpp
+	"includes.h"
+	"Database.h"
+
+1640086182 source:c:\users\offic\documents\programe c\bankapp\user.cpp
+	"User.h"
+
+1640086192 c:\users\offic\documents\programe c\bankapp\user.h
+	"includes.h"
+
+1640088160 source:c:\users\offic\documents\programe c\bankapp\database.cpp
+	"Database.h"
+
+1640088155 c:\users\offic\documents\programe c\bankapp\database.h
+	"includes.h"
+	"User.h"
+
+1640084479 c:\users\offic\documents\programe c\bankapp\includes.h
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+
+1640112571 source:e:\workspace\codeblocks\bankapp\database.cpp
+	"Database.h"
+	"User.h"
+
+1640112515 e:\workspace\codeblocks\bankapp\database.h
+	"includes.h"
+
+1640125750 e:\workspace\codeblocks\bankapp\includes.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<stack>
+	<unordered_set>
+	<unordered_map>
+	<cstdio>
+	<cstdlib>
+	<windows.h>
+	"defines.h"
+
+1640119111 e:\workspace\codeblocks\bankapp\user.h
+	"includes.h"
+
+1640125754 source:e:\workspace\codeblocks\bankapp\main.cpp
+	"Debug.h"
+	"UserDatabase.h"
+	"BankDatabase.h"
+	"LoginScreen.h"
+	"ScreenStack.h"
+
+1640119118 source:e:\workspace\codeblocks\bankapp\user.cpp
+	"User.h"
+
+1640119066 source:e:\workspace\codeblocks\bankapp\screen.cpp
+	"Screen.h"
+
+1640119008 e:\workspace\codeblocks\bankapp\screen.h
+	"includes.h"
+
+1640125110 source:e:\workspace\codeblocks\bankapp\mainscreen.cpp
+	"MainScreen.h"
+	"ScreenStack.h"
+	"User.h"
+	"BankAccountReadOnly.h"
+	"BankDatabase.h"
+
+1640124529 e:\workspace\codeblocks\bankapp\mainscreen.h
+	"Screen.h"
+
+1640120894 source:e:\workspace\codeblocks\bankapp\loginscreen.cpp
+	"LoginScreen.h"
+	"UserDatabase.h"
+	"ScreenStack.h"
+	"MainScreen.h"
+
+1640120866 e:\workspace\codeblocks\bankapp\loginscreen.h
+	"Screen.h"
+
+1640119076 source:e:\workspace\codeblocks\bankapp\screenstack.cpp
+	"ScreenStack.h"
+	"Screen.h"
+
+1640117010 e:\workspace\codeblocks\bankapp\screenstack.h
+	"includes.h"
+
+1640105651 source:e:\workspace\codeblocks\bankapp\firstscreen.cpp
+	"FirstScreen.h"
+	"ScreenStack.h"
+
+1640105623 e:\workspace\codeblocks\bankapp\firstscreen.h
+	"Screen.h"
+
+1640124961 source:e:\workspace\codeblocks\bankapp\includes.cpp
+	"includes.h"
+
+1640124891 source:e:\workspace\codeblocks\bankapp\bankaccount.cpp
+	"BankAccount.h"
+	"Debug.h"
+
+1640124471 e:\workspace\codeblocks\bankapp\bankaccount.h
+	"includes.h"
+	"BankAccountReadOnly.h"
+
+1640124745 source:e:\workspace\codeblocks\bankapp\bankdatabase.cpp
+	"BankDatabase.h"
+	"BankAccount.h"
+	"Debug.h"
+
+1640124760 e:\workspace\codeblocks\bankapp\bankdatabase.h
+	"includes.h"
+
+1640119689 e:\workspace\codeblocks\bankapp\userdatabase.h
+	"includes.h"
+
+1640124016 source:e:\workspace\codeblocks\bankapp\userdatabase.cpp
+	"UserDatabase.h"
+	"Debug.h"
+	"User.h"
+
+1640125635 source:e:\workspace\codeblocks\bankapp\debug.cpp
+	"Debug.h"
+
+1640118238 e:\workspace\codeblocks\bankapp\debug.h
+	"includes.h"
+
+1640123583 e:\workspace\codeblocks\bankapp\bankaccountreadonly.h
+	"includes.h"
+
+1640125830 e:\workspace\codeblocks\bankapp\defines.h
+

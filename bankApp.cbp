@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="bankApp" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/bankApp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/bankApp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="BankAccount.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="BankAccount.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="BankAccountReadOnly.h" />
+		<Unit filename="BankDatabase.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="BankDatabase.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Debug.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Debug.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="LoginScreen.cpp" />
+		<Unit filename="LoginScreen.h" />
+		<Unit filename="MainScreen.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="MainScreen.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Screen.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Screen.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="ScreenStack.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="ScreenStack.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="User.cpp" />
+		<Unit filename="User.h" />
+		<Unit filename="UserDatabase.cpp" />
+		<Unit filename="UserDatabase.h" />
+		<Unit filename="bank.txt" />
+		<Unit filename="includes.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="includes.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="log.txt" />
+		<Unit filename="main.cpp" />
+		<Unit filename="users.txt" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
