@@ -31,7 +31,9 @@ User* UserDatabase::login(const string& username, const string& password) {
   if (user != NULL && !user->checkPassword(password)) {
     user = NULL;
     Debug::Log("[UserDatabase] Login failed");
-  } else
+  }
+
+  if (user != NULL)
     Debug::Log("[UserDatabase] Login successful");
 
   return user;
