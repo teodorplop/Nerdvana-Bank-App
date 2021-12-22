@@ -76,6 +76,9 @@
 		<Unit filename="UserDatabase.cpp" />
 		<Unit filename="UserDatabase.h" />
 		<Unit filename="bank.txt" />
+		<Unit filename="defines.h">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="includes.cpp">
 			<Option target="Debug" />
 		</Unit>

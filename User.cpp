@@ -2,11 +2,11 @@
 
 using namespace std;
 
-User::User(int id) {
-  this->id = id;
+User::User() {
 }
 
-User::User(int id, const string& username, const string& password) : User(id) {
+User::User(int id, const string& username, const string& password) : User() {
+  this->id = id;
   this->username = username;
   this->password = password;
 }

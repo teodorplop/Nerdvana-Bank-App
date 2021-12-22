@@ -71,7 +71,7 @@ bool BankDatabase::withdraw(BankAccountReadOnly* bankAccount, int value) {
 void BankDatabase::readFromDisk() {
   ifstream fin(FILENAME);
 
-  lastBankAccountId = 0;
+  lastBankAccountId = -1;
 
   string line;
   BankAccount* bankAccount;

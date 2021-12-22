@@ -9,6 +9,8 @@ private:
   static const string FILENAME;
 
   vector<User*> users;
+  int lastUserId;
+
   User* fetchUser(const string& username);
 
   void readFromDisk();

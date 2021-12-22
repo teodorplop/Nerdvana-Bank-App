@@ -45,7 +45,7 @@ User* UserDatabase::createUser(const string& username, const string& password) {
   User* user = fetchUser(username);
 
   if (user == NULL) {
-    user = new User(users.size(), username, password);
+    user = new User(++lastUserId, username, password);
     users.push_back(user);
 
     Debug::Log("[UserDatabase] Register successful {%s}", username.c_str());
@@ -60,13 +60,17 @@ User* UserDatabase::createUser(const string& username, const string& password) {
 void UserDatabase::readFromDisk() {
   ifstream fin(FILENAME);
 
+  lastUserId = -1;
+
   string line;
   User* user;
   while (getline(fin, line))
     if (line.size() > 0) {
-      user = new User(users.size());
+      user = new User();
       user->deserialize(line);
       users.push_back(user);
+
+      lastUserId = max(lastUserId, user->getId());
     }
 
   fin.close();

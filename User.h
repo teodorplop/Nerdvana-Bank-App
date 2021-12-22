@@ -11,7 +11,7 @@ private:
   string password;
 
 public:
-  User(int id);
+  User();
   User(int id, const string& username, const string& password);
 
   int getId();
