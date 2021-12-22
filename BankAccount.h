@@ -6,7 +6,7 @@
 
 class BankAccount : public BankAccountReadOnly {
 public:
-  BankAccount(int id);
+  BankAccount();
   BankAccount(int id, int ownerId);
 
   void deposit(int value);

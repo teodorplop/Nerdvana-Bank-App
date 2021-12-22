@@ -2,12 +2,12 @@
 
 #include "Debug.h"
 
-BankAccount::BankAccount(int id) {
-  this->id = id;
+BankAccount::BankAccount() {
   balance = 0;
 }
 
-BankAccount::BankAccount(int id, int ownerId) : BankAccount(id) {
+BankAccount::BankAccount(int id, int ownerId) : BankAccount() {
+  this->id = id;
   this->ownerId = ownerId;
 }
 

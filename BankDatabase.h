@@ -10,6 +10,7 @@ private:
   static const string FILENAME;
 
   vector<BankAccount*> bankAccounts;
+  int lastBankAccountId;
 
   void readFromDisk();
   void writeToDisk();

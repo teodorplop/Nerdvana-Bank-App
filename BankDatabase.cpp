@@ -14,7 +14,7 @@ BankDatabase::~BankDatabase() {
 }
 
 BankAccountReadOnly* BankDatabase::createAccount(int ownerId) {
-  BankAccount* bankAccount = new BankAccount(bankAccounts.size(), ownerId);
+  BankAccount* bankAccount = new BankAccount(++lastBankAccountId, ownerId);
   bankAccounts.push_back(bankAccount);
 
   Debug::Log("[BankDatabase] Created account with id %d for ownerId %d", bankAccount->getId(), ownerId);
@@ -71,13 +71,17 @@ bool BankDatabase::withdraw(BankAccountReadOnly* bankAccount, int value) {
 void BankDatabase::readFromDisk() {
   ifstream fin(FILENAME);
 
+  lastBankAccountId = 0;
+
   string line;
   BankAccount* bankAccount;
   while (getline(fin, line))
     if (line.size() > 0) {
-      bankAccount = new BankAccount(bankAccounts.size());
+      bankAccount = new BankAccount();
       bankAccount->deserialize(line);
       bankAccounts.push_back(bankAccount);
+
+      lastBankAccountId = max(lastBankAccountId, bankAccount->getId());
     }
 
   fin.close();
