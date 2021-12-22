@@ -67,8 +67,8 @@ void MainScreen::withdraw() {
   BankAccountReadOnly* bankAccount = getBankAccount(waitForAccountId());
   int minValue, maxValue;
   if (bankAccount != NULL) {
-    minValue = MIN_VALUE;
     maxValue = bankAccount->getBalance();
+    minValue = min(MIN_VALUE, maxValue);
 
     if (bankDb->withdraw(bankAccount, waitForValue(minValue, maxValue)))
       refresh();
@@ -103,9 +103,6 @@ int MainScreen::waitForAccountId() {
 }
 
 int MainScreen::waitForValue(int minValue, int maxValue) {
-  if (minValue > maxValue)
-    minValue = maxValue;
-
   int value;
 
   cout << "Insert value (min = " << minValue << ", max = " << maxValue << "): ";
