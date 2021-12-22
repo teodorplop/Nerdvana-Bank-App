@@ -20,5 +20,7 @@ void Debug::Log(const char* format, ...) {
   va_end(args);
 
   fputc('\n', instance->logFile);
+
+  fflush(instance->logFile);
 #endif
 }
