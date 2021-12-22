@@ -1,47 +1,52 @@
 #include "Screen.h"
 
-Screen::Screen(const string& name, const vector<string>& options) {
+Screen::Screen(const string& name, const vector<string>& userActions) {
   this->name = name;
-  this->options = options;
+  this->userActions = userActions;
 }
 
 void Screen::showTitle() {
   cout << LINE << name << '\n' << LINE;
 }
 
-void Screen::showOptions() {
+void Screen::showUserActions() {
   unsigned int i;
 
-  for (i = 0; i < options.size(); ++i)
-    cout << i << " - " << options[i] << '\n';
+  for (i = 0; i < userActions.size(); ++i)
+    cout << i << " - " << userActions[i] << '\n';
 
   cout << LINE;
 }
 
-bool Screen::isRefreshRequested() {
-  return refreshRequested;
-}
-
 void Screen::refresh() {
-  refreshRequested = true;
+  isRefreshRequested = true;
   show();
 }
 
 void Screen::show() {
   system("cls");
 
-  refreshRequested = false;
   showTitle();
-  showOptions();
+  showUserActions();
+  showInternal();
+
+  isRefreshRequested = false;
+  do {
+    handleUserAction(waitForInput());
+  } while (!isRefreshRequested && !isExitRequested());
 }
 
+void Screen::showInternal() {}
+
+void Screen::handleUserAction(const string& action) {}
+
 const string& Screen::waitForInput() {
-  unsigned int option;
+  unsigned int inputIndex;
 
   do {
-    cin >> option;
+    cin >> inputIndex;
     cin.get();
-  } while (option >= options.size());
+  } while (inputIndex >= userActions.size());
 
-  return options[option];
+  return userActions[inputIndex];
 }

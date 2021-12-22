@@ -11,21 +11,17 @@ LoginScreen::LoginScreen(UserDatabase* userDb, BankDatabase* bankDb) :
   this->bankDb = bankDb;
 }
 
-void LoginScreen::show() {
-  Screen::show();
+void LoginScreen::showInternal() {
+  cout << "Welcome to BankApp!\n";
+}
 
-  string option;
-  string username, password;
-  do {
-    option = waitForInput();
-
-    if (option == "Login")
-      login();
-    else if (option == "Register")
-      createUser();
-    else if (option == "Exit")
-      exit();
-  } while (!isRefreshRequested() && !isExitRequested());
+void LoginScreen::handleUserAction(const string& action) {
+  if (action == "Login")
+    login();
+  else if (action == "Register")
+    createUser();
+  else if (action == "Exit")
+    exit();
 }
 
 void LoginScreen::login() {

@@ -5,20 +5,23 @@
 class Screen {
 private:
   string name;
-  vector<string> options;
+  vector<string> userActions;
 
-  bool refreshRequested;
+  bool isRefreshRequested;
 
-protected:
   void showTitle();
-  void showOptions();
+  void showUserActions();
   const string& waitForInput();
 
-  bool isRefreshRequested();
+protected:
+
   void refresh();
 
-public:
-  Screen(const string& name, const vector<string>& options);
+  virtual void showInternal();
+  virtual void handleUserAction(const string& action);
 
-  virtual void show();
+public:
+  Screen(const string& name, const vector<string>& userActions);
+
+  void show();
 };

@@ -26,7 +26,10 @@ private:
   int waitForAccountId();
   int waitForValue(int minValue = MIN_VALUE, int maxValue = MAX_VALUE);
 
+protected:
+  void showInternal();
+  void handleUserAction(const string& action);
+
 public:
   MainScreen(BankDatabase* bankDb, User* user);
-  void show();
 };

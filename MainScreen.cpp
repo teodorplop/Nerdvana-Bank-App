@@ -16,33 +16,28 @@ MainScreen::MainScreen(BankDatabase* bankDb, User* user) :
   this->user = user;
 }
 
-void MainScreen::show() {
-  Screen::show();
-
+void MainScreen::showInternal() {
   bankAccounts = bankDb->getAccounts(user->getId());
   cout << "Number of accounts: " << bankAccounts.size() << '\n';
   cout << LINE;
 
   for (BankAccountReadOnly* bankAccount : bankAccounts)
     cout << "Account " << bankAccount->getId() << ": " << bankAccount->getBalance() << '\n';
+}
 
-  string option;
-  do {
-    option = waitForInput();
-
-    if (option == "Create new account")
-      createAccount();
-    else if (option == "Delete account")
-      deleteAccount();
-    else if (option == "Deposit")
-      deposit();
-    else if (option == "Withdraw")
-      withdraw();
-    else if (option == "Logout")
-      logout();
-    else if (option == "Exit")
-      exit();
-  } while (!isRefreshRequested() && !isExitRequested());
+void MainScreen::handleUserAction(const string& action) {
+  if (action == "Create new account")
+    createAccount();
+  else if (action == "Delete account")
+    deleteAccount();
+  else if (action == "Deposit")
+    deposit();
+  else if (action == "Withdraw")
+    withdraw();
+  else if (action == "Logout")
+    logout();
+  else if (action == "Exit")
+    exit();
 }
 
 void MainScreen::createAccount() {

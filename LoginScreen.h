@@ -17,7 +17,10 @@ private:
   void waitForUsernameAndPassword(string& username, string& password);
   void onLoginSuccessful(User* user);
 
+protected:
+  void showInternal();
+  void handleUserAction(const string& action);
+
 public:
   LoginScreen(UserDatabase* userDb, BankDatabase* bankDb);
-  void show();
 };
